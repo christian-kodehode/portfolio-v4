@@ -14,25 +14,30 @@ body {
 
 /*   DIVS
 **
-**   DISPLAY + WIDTH   */
+**   DISPLAY   */
 .main,
 .top,
 .header,
 .landing,
 .landing-content,
+.profile-pic,
+.pitch,
 .about,
 .projects,
 .bottom,
 .contact,
-.footer {
+.footer,
+.up,
+.down {
   display: flex;
-  width: 98.7vw;
 }
 
 /*   DIV FLEX-DIRECTION   */
 .main,
 .top,
 .landing,
+.profile-pic,
+.pitch,
 .about,
 .contact,
 .projects,
@@ -42,11 +47,27 @@ body {
 
 .header,
 .landing-content,
-.footer {
+.footer,
+.up,
+.down {
   flex-direction: row;
 }
 
-/*   DIV HEIGHT   */
+/*   DIV WIDTH & HEIGHT   */
+.top,
+.header,
+.landing,
+.landing-content,
+.about,
+.projects,
+.bottom,
+.contact,
+.footer,
+.up,
+.down {
+  width: 100%;
+}
+
 .header {
   height: 80px;
 }
@@ -55,15 +76,24 @@ body {
 .about,
 .projects,
 .bottom {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .landing {
-  height: 521px;
+  height: 100%;
+}
+
+.landing-content {
+  height: calc(100vh - ((100vh - 100%)));
+}
+
+.down,
+.up {
+  height: 40px;
 }
 
 .contact {
-  height: 541px;
+  height: 100%;
 }
 
 .footer {
@@ -96,6 +126,223 @@ body {
 }
 
 /*   DIV PLACEMENTS   */
+
+.landing-content {
+  justify-content: space-evenly;
+  align-items: center;
+}
+.profile-pic {
+  justify-content: center;
+  align-items: center;
+}
+
+.pitch {
+  justify-content: center;
+  align-items: center;
+}
+
+.pitch-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pitch-para {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.h1-pitch {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+  font-family: "Fjalla One", Arial, Helvetica, sans-serif;
+  color: #0f2246;
+}
+
+.h2-pitch {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  font-size: 1.75rem;
+  font-family: Cabin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(86, 132, 231);
+}
+.p-pitch {
+  margin: 0;
+  padding: 0.25rem 0;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  font-family: Cabin, Georgia, Times, "Times New Roman", serif;
+}
+
+.exp-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.exp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 55%;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55%;
+  width: 100%;
+}
+
+.experience h1,
+.experience p {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 30%;
+  width: 70%;
+}
+
+.skills-img {
+  width: 50px;
+  margin: 0 5px;
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+
+.cv a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1-cv {
+  font-size: 2.5rem;
+  font-family: "Fjalla One", sans;
+  color: #0f2246;
+}
+
+.pdf-img {
+  width: 65%;
+  border: 2px solid black;
+  border-radius: 5%;
+}
+
+.pdf-img:hover {
+  background-blend-mode: darken;
+  background-color: black;
+  opacity: 50%;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 75%;
+  width: 85%;
+}
+
+.projectIemContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+
+.projectItem-imgLink {
+  height: 75%;
+  border: 2px solid rebeccapurple;
+}
+
+.projectItemImg {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 5%;
+  opacity: 60%;
+}
+
+.projectItemImg:hover {
+  opacity: 100%;
+}
+
+.h2-projectItem {
+  font-size: 1.5rem;
+  font-family: "Fjalla One";
+  color: #0f2246;
+  margin: 0;
+  padding: 0;
+}
+
+.projectItem-title {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+.projectItemGithub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.projectItemGitImg {
+  border: 1px solid black;
+  height: 70%;
+}
+
+.projects-seeMoreBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid orchid;
+  height: 10%;
+  width: 85%;
+}
+
 .footer {
   justify-content: center;
   align-items: center;
@@ -162,26 +409,29 @@ body {
   opacity: 50%;
 }
 
-/*
+/* 
 **   SECTION CONTENT
 */
 
-.landing-content,
-.contact-content {
-  width: 100%;
-  height: 82vh;
-  padding: 50px;
-}
-
-.content {
-  width: 100%;
-  height: 90vh;
-}
-
+/*   PICTURE & PITCH   */
 .profile-pic,
 .pitch {
   height: 80%;
-  border: 1px solid black;
+  width: 42.5%;
+}
+
+.profile-pic img {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5%;
+}
+
+/* 
+**   ----- REST -----
+*/
+.contact-content {
+  width: 100%;
+  height: 82vh;
 }
 
 /*   
@@ -200,11 +450,8 @@ body {
 
 .up,
 .down {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .up-btn,
@@ -216,7 +463,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  height: 5vh;
+  height: 100%;
   background-color: black;
   color: white;
   border: 2px solid black;
