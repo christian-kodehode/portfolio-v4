@@ -281,7 +281,7 @@ body {
 .projectIemContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 100%;
   width: 30%;
@@ -289,7 +289,15 @@ body {
 
 .projectItem-imgLink {
   height: 75%;
-  border: 2px solid rebeccapurple;
+}
+
+.projectItem-title {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .projectItemImg {
@@ -312,14 +320,6 @@ body {
   padding: 0;
 }
 
-.projectItem-title {
-  height: 10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-self: center;
-}
-
 .projectItemGithub {
   display: flex;
   flex-direction: column;
@@ -329,8 +329,9 @@ body {
 }
 
 .projectItemGitImg {
-  border: 1px solid black;
-  height: 70%;
+  border: 2px solid black;
+  border-radius: 15%;
+  height: 100%;
 }
 
 .projects-seeMoreBtn {
@@ -338,14 +339,97 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 2px solid orchid;
   height: 10%;
-  width: 85%;
+  width: 35%;
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: Exo, sans-serif;
+  background-color: rgb(86, 132, 231);
+  color: #0f2246;
+  border: 3px solid #0f2246;
+  border-radius: 0.5rem;
+}
+
+.projects-seeMoreBtn:hover {
+  background-color: #0f2246;
+  color: rgb(86, 132, 231);
+  border-color: rgb(86, 132, 231);
+  cursor: pointer;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 82vh;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.contact-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+  height: 100px;
+}
+
+.msg-btn {
+  font-size: 1.25rem;
+  font-family: Exo, sans-serif;
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+}
+
+.contact-msgbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.contact-label {
+  font-size: 2rem;
+  font-family: "Fjalla One", sans;
+  color: #0f2246;
+  margin-bottom: 10px;
+}
+
+.contact-input {
+  font-size: 1.5rem;
+  font-family: Exo, sans-serif;
+}
+
+.contact-msg {
+  font-size: 1.25rem;
+  font-family: Exo, sans-serif;
+  height: 300px;
 }
 
 .footer {
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 82vh;
 }
 
 /* 
@@ -376,7 +460,7 @@ body {
   align-items: center;
   width: 60%;
   font-family: Cutive, "Courier New", Courier, monospace;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .nav-btns a {
@@ -424,14 +508,6 @@ body {
   width: 100%;
   border: 2px solid black;
   border-radius: 5%;
-}
-
-/* 
-**   ----- REST -----
-*/
-.contact-content {
-  width: 100%;
-  height: 82vh;
 }
 
 /*   

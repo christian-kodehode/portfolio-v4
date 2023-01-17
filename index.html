@@ -181,8 +181,8 @@
                   href="https://github.com/christian-kodehode/Innleveringer"
                   target="_blank"
                 >
-                  <img class="projectItemGitImg" src="./pics/github.jpg"
-                /></a>
+                  <img class="projectItemGitImg" src="./pics/github.jpg" />
+                </a>
               </div>
             </div>
             <div class="projectIemContainer">
@@ -199,10 +199,18 @@
               </a>
               <div class="projectItem-title">
                 <h2 class="h2-projectItem">Julekalender</h2>
+                <a
+                  class="projectItemGithub"
+                  href="https://github.com/christian-kodehode/Innleveringer"
+                  target="_blank"
+                >
+                  <img class="projectItemGitImg" src="./pics/github.jpg" />
+                </a>
               </div>
             </div>
             <div class="projectIemContainer">
               <a
+                class="projectItem-imgLink"
                 href="https://christian-kodehode.github.io/Innleveringer/CSS%20Advanced%201/index.html"
                 target="_blank"
               >
@@ -214,10 +222,17 @@
               </a>
               <div class="projectItem-title">
                 <h2 class="h2-projectItem">CSS effekter</h2>
+                <a
+                  class="projectItemGithub"
+                  href="https://github.com/christian-kodehode/Innleveringer"
+                  target="_blank"
+                >
+                  <img class="projectItemGitImg" src="./pics/github.jpg" />
+                </a>
               </div>
             </div>
           </div>
-          <div class="projects-seeMoreBtn"></div>
+          <button class="projects-seeMoreBtn">Se alle prosjekter</button>
         </div>
         <div class="down">
           <a class="down-btn-bottom" href="#contact">↓</a>
@@ -229,7 +244,43 @@
             <a class="up-btn" href="#projects">↑</a>
             <a class="up-btn" href="#top">↑↑</a>
           </div>
-          <div class="contact-content"></div>
+          <div class="contact-content">
+            <div class="contact-left">
+              <div class="contact-line">
+                <label class="contact-label" for="cname">Navn :</label>
+                <input
+                  class="contact-input"
+                  id="cname"
+                  type="text"
+                  name="cnam"
+                  placeholder="Navn"
+                />
+              </div>
+              <div class="contact-line">
+                <label class="contact-label" for="cmail">Epost :</label>
+                <input
+                  class="contact-input"
+                  id="cmail"
+                  type="email"
+                  name="cmail"
+                  placeholder="Epost"
+                />
+              </div>
+              <button class="msg-btn" id="msg-btn" onclick="sendMessage()">
+                Send beskjed!
+              </button>
+            </div>
+            <div class="contact-right">
+              <div class="contact-msgbox">
+                <label class="contact-label" for="cmsg">Beskjed :</label>
+                <textarea
+                  class="contact-msg"
+                  id="c-msg-box"
+                  placeholder="Skriv beskjed..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="footer">Christian Tørre Riis (c) 2023</div>
       </div>
