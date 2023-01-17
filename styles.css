@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/*   DIVS
+**
+**   DISPLAY + WIDTH   
+*/
+.main,
+.top,
+.header,
+.landing,
+.about,
+.projects,
+.bottom,
+.contact,
+.footer {
+  display: flex;
+  width: 98.7vw;
+}
+
+/*   DIV FLEX-DIRECTION   */
+.main,
+.top,
+.landing,
+.about,
+.contact,
+.projects,
+.bottom {
+  flex-direction: column;
+}
+
+.header,
+.footer {
+  flex-direction: row;
+}
+
+/*   DIV HEIGHT   */
+.header,
+.footer {
+  height: 80px;
+}
+
+.top,
+.about,
+.projects,
+.bottom {
+  min-height: 100vh;
+}
+
+.landing,
+.contact {
+  min-height: 521px;
+}
+
+/*   DIV BACKGROUND   */
+.header,
+.footer {
+  background-color: dodgerblue;
+}
+
+.pitch {
+  background-color: ghostwhite;
+}
+
+.about {
+  background-color: ghostwhite;
+}
+
+.projects {
+  background-color: ghostwhite;
+}
+
+.contact {
+  background-color: ghostwhite;
+}
+
+/*   DIV BORDERS   */
+.header {
+  border-bottom: 1px solid black;
+}
+
+.footer {
+  border-top: 1px solid black;
+}
+
+/* 
+**   HEADER 
+*/
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 13%;
+}
+
+.logo img {
+  max-height: 79px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.socmed-btns {
+  width: 27%;
+}
+
+.nav-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.nav-btns a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.nav-btns a:hover {
+  text-decoration: underline;
+  color: dodgerblue;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.socmed-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socmed-img {
+  max-height: 50px;
+  border: 2px solid black;
+  border-radius: 15%;
+}
+
+.socmed-img:hover {
+  opacity: 50%;
+}
+
+/*
+**   SECTION CONTENT
+*/
+
+.landing-content,
+.contact-content {
+  width: 100%;
+  height: 82vh;
+  padding: 50px;
+  border: 1px solid red;
+}
+
+.content {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid blue;
+}
+
+/*
+**   SCROLL BUTTONS
+*/
+
+.up,
+.down {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.up-btn,
+.down-btn,
+.up-btn-top,
+.down-btn-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 5vh;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+
+.up-btn,
+.down-btn {
+  width: 5%;
+}
+
+.up-btn-top,
+.down-btn-bottom {
+  width: 10%;
+}
+
+.up-btn:hover,
+.down-btn:hover,
+.up-btn-top:hover,
+.down-btn-bottom:hover {
+  cursor: pointer;
+  background-color: dodgerblue;
+}
