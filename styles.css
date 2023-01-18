@@ -89,7 +89,7 @@ body {
 
 .down,
 .up {
-  height: 40px;
+  height: 5vh;
 }
 
 .contact {
@@ -155,7 +155,7 @@ body {
   align-items: flex-start;
 }
 
-.h1-pitch {
+.h1 {
   margin: 0;
   padding: 0;
   font-size: 2.5rem;
@@ -163,14 +163,23 @@ body {
   color: #0f2246;
 }
 
-.h2-pitch {
+.h2 {
   margin: 0 0 1rem 0;
   padding: 0;
   font-size: 1.75rem;
   font-family: Cabin, Georgia, Times, "Times New Roman", serif;
   color: rgb(86, 132, 231);
 }
-.p-pitch {
+
+.h6 {
+  font-size: 0.5rem;
+  font-style: italic;
+  font-family: Exo, sans-serif;
+  margin: 0.5vh 0 0 0;
+  padding: 0;
+}
+
+.p {
   margin: 0;
   padding: 0.25rem 0;
   line-height: 1.25rem;
@@ -179,60 +188,46 @@ body {
 }
 
 .exp-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "exp exp skills"
+    "exp exp cv";
+  height: 90vh;
   width: 100%;
+  border: 2px solid red;
 }
 
 .exp {
+  grid-area: exp;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 100%;
-  width: 55%;
-}
-
-.experience {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 55%;
-  width: 100%;
-}
-
-.experience h1,
-.experience p {
-  margin: 10px 0;
-  padding: 0;
+  border: 2px solid blue;
 }
 
 .skills {
+  grid-area: skills;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  height: 30%;
-  width: 70%;
+  border: 2px solid green;
 }
 
 .skills-img {
-  width: 50px;
+  width: 5vw;
   margin: 0 5px;
 }
 
 .cv {
+  grid-area: cv;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 30%;
+  border: 2px solid purple;
 }
 
 .cv a {
@@ -242,14 +237,8 @@ body {
   align-items: center;
 }
 
-.h1-cv {
-  font-size: 2.5rem;
-  font-family: "Fjalla One", sans;
-  color: #0f2246;
-}
-
 .pdf-img {
-  width: 65%;
+  max-width: 40%;
   border: 2px solid black;
   border-radius: 5%;
 }
@@ -278,7 +267,7 @@ body {
   width: 85%;
 }
 
-.projectIemContainer {
+.projectItemContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -305,14 +294,13 @@ body {
   height: 100%;
   border: 2px solid black;
   border-radius: 5%;
-  opacity: 60%;
 }
 
 .projectItemImg:hover {
   opacity: 100%;
 }
 
-.h2-projectItem {
+.h3 {
   font-size: 1.5rem;
   font-family: "Fjalla One";
   color: #0f2246;
@@ -485,6 +473,7 @@ body {
 
 .socmed-img {
   max-height: 8vh;
+  max-width: 5vw;
   border: 2px solid black;
   border-radius: 15%;
 }
@@ -575,29 +564,159 @@ body {
   }
   .socmed-img {
     max-height: 7vh;
+    max-width: 5vw;
+  }
+  .h1 {
+    font-size: 2rem;
+  }
+  .h2 {
+    font-size: 1.5rem;
+  }
+  .p {
+    font-size: 0.875rem;
+  }
+  .skills-img {
+    max-width: 4vw;
+  }
+  .pdf-img {
+    max-width: 50%;
   }
 }
 
-/*   ------ WIDTH 800 - 960 ------   */
+/*   ------ WIDTH 675 - 800 ------   */
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 800px) {
   .nav-btns {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .socmed-img {
-    max-height: 7vh;
+    max-height: 6vh;
+    max-width: 4.5vw;
+  }
+  .h1 {
+    font-size: 1.75rem;
+  }
+  .h2 {
+    font-size: 1.25rem;
+  }
+  .p {
+    font-size: 0.75rem;
+  }
+  .exp-content {
+    grid-template-areas:
+      "exp exp exp skills"
+      "exp exp exp cv";
+  }
+  .pdf-img {
+    max-width: 70%;
   }
 }
 
-/*   ------ WIDTH 600 - 800 ------   */
+/*   ------ WIDTH 500 - 675 ------   */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 675px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    height: 30vh;
+    min-height: 21vh;
+  }
+  .logo {
+    justify-content: space-between;
+    min-width: 25%;
+    max-width: 25%;
+    order: 2;
+  }
+  .logo img {
+    max-height: 10vh;
+    width: auto;
+    border: 1px solid black;
   }
   .nav-btns {
+    justify-content: space-between;
+    min-width: 90%;
+    order: 1;
+  }
+  .socmed-btns {
+    justify-content: space-between;
+    width: 55vw;
+    order: 3;
+  }
+  .socmed-img {
+    max-height: 8vh;
+    max-width: 8vw;
+  }
+  .exp-content {
+    grid-template-areas:
+      "exp exp exp skills"
+      "exp exp exp skills"
+      "exp exp exp skills"
+      "exp exp exp cv";
+  }
+}
+
+/*   ------ WIDTH 0 - 500 ------   */
+
+@media screen and (max-width: 500px) {
+  .header {
+    min-height: 18vh;
+  }
+  .nav-btns {
+    min-width: 90%;
     font-size: 0.875rem;
+  }
+  .logo {
+    min-width: 30%;
+  }
+  .logo img {
+    max-height: 8vh;
+    width: auto;
+  }
+  .landing-content {
+    flex-direction: column;
+  }
+  .profile-pic {
+    width: 90vw;
+    max-height: 25vh;
+  }
+  .profile-pic img {
+    width: auto;
+    max-height: 20vh;
+  }
+  .pitch {
+    width: 90vw;
+  }
+  .exp-content {
+    grid-template-areas:
+      "exp exp exp"
+      "skills cv cv";
+  }
+  .exp {
+    height: 65vh;
+  }
+  .skills {
+    height: 25vh;
+  }
+  .cv {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 25vh;
+  }
+  #h1-cv {
+    font-size: 1.25rem;
+    max-width: 5vw;
+  }
+  .h6 {
+    max-width: 10vw;
+  }
+  .cv a {
+    margin: 0;
+    padding: 0;
+  }
+  .pdf-img {
+    height: 17.5vh;
+    width: auto;
+    max-width: 100%;
   }
 }
