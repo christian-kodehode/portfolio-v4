@@ -101,6 +101,10 @@ body {
 }
 
 /*   DIV BACKGROUND   */
+
+.main {
+  background-color: ghostwhite;
+}
 .header {
   background-color: rgb(86, 132, 231);
 }
