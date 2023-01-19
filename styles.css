@@ -2,7 +2,6 @@
 
 * {
   box-sizing: border-box;
-  scrollbar-width: 0;
 }
 
 html {
@@ -11,6 +10,9 @@ html {
 
 body {
   margin: 0;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
 }
 
 /*   DIVS
