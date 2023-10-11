@@ -92,7 +92,7 @@ body {
 
 .down,
 .up {
-    height: 10vh;
+    height: 5vh;
 }
 
 .contact {
@@ -667,6 +667,12 @@ body {
     .nav-btns {
         min-width: 90%;
         font-size: 0.875rem;
+    }
+    .up {
+        height: 15vh;
+    }
+    .down {
+        height: 15vh;
     }
     .logo {
         min-width: 30%;
