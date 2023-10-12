@@ -294,6 +294,7 @@ body {
 .projectItemImg {
     width: 100%;
     height: 100%;
+    opacity: 65%;
     border: 2px solid black;
     border-radius: 5%;
 }
@@ -329,21 +330,19 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 10%;
-    width: 35%;
-    font-size: 1.75rem;
-    font-weight: 700;
+    height: 7.5%;
+    width: 25%;
+    font-size: 1.325rem;
+    font-weight: 500;
     font-family: Exo, sans-serif;
-    background-color: rgb(86, 132, 231);
-    color: #0f2246;
+    background-color: #0f2246;
+    color: white;
     border: 3px solid #0f2246;
     border-radius: 0.5rem;
 }
-
 .projects-seeMoreBtn:hover {
-    background-color: #0f2246;
-    color: rgb(86, 132, 231);
-    border-color: rgb(86, 132, 231);
+    background-color: rgb(86, 132, 231);
+    color: white;
     cursor: pointer;
 }
 
